@@ -19,6 +19,7 @@
 .nameContainer {
     display: flex;
     align-items: flex-end;
+    font-weight: 700;
     gap: 15px;
     line-height: 1;
 }
