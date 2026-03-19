@@ -3,7 +3,7 @@
     inset: 0;
     z-index: 9999;
     display: flex;
-    font-size: 900;
+    font-weight: 900;
     justify-content: center;
     align-items: center;
 
@@ -25,7 +25,7 @@
 
 .Name {
     font-size: 120px;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Arial Black', Impact, sans-serif;
     margin-left: 200px;
     color: white;
     animation: fadeUp 1.2s ease-out forwards;

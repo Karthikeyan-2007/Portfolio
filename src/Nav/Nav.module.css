@@ -20,7 +20,7 @@
     font-size: clamp(10px, 20vw, 280px);
     position: fixed;
     font-weight: 900;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Arial Black', Impact, sans-serif;
     color: rgb(207, 207, 207);
     line-height: 0.9;
     padding: 10px;
