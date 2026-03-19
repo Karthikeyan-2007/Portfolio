@@ -1,0 +1,90 @@
+.Intro {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ff4400;
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 1s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.Intro.hide {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.IntroLogo {
+    display: flex;
+    align-items: baseline;
+}
+
+.Name {
+    font-size: 120px;
+    font-family: Impact, Charcoal, sans-serif;
+    margin-left: 200px;
+    color: white;
+    animation: fadeUp 1.2s ease-out forwards;
+}
+
+.Name.shift {
+    animation: slide 0.8s ease-out forwards;
+}
+
+.portfolio {
+    font-size: 48px;
+    margin-left: 20px;
+    color: white;
+    opacity: 0;
+    transform: translateX(120px);
+}
+
+.portfolio.show {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+:root {
+    --slide-x: -100px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(var(--slide-x));
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(var(--slide-x));
+    }
+}
+
+@media (max-width: 700px) {
+    :root {
+        --slide-x: -50px;
+    }
+
+    .IntroLogo {
+        flex-direction: column;
+    }
+
+    .Name {
+        font-size: 80px;
+        margin-left: 0;
+    }
+}

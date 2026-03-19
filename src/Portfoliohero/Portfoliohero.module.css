@@ -1,0 +1,271 @@
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 5% 80px;
+  overflow: hidden;
+}
+
+.characterCard {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.characterCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.characterIcon {
+  font-size: 56px;
+  line-height: 1;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+.characterBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Card - Premium Dark Glass */
+.mainCard {
+  position: relative;
+  z-index: 3;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 32px;
+  padding: 60px 50px;
+  max-width: 800px;
+  width: 100%;
+  /* Double border effect for premium look */
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 40px 120px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.tagline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139, 92, 246, 0.1);
+  color: #c4b5fd;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.taglineIcon {
+  color: #a855f7;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 25px 0;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #c084fc 0%, #2dd4bf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(192, 132, 252, 0.3);
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #a1a1aa;
+  margin: 0 0 30px 0;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description strong {
+  color: #e9d5ff;
+  font-weight: 600;
+}
+
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  padding: 16px 24px;
+  border-radius: 16px;
+  margin-bottom: 35px;
+  font-size: 15px;
+  color: #d8b4fe;
+}
+
+.offerIcon {
+  color: #fbbf24;
+}
+
+.discount {
+  color: #a855f7;
+  font-size: 18px;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.primaryBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.6);
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.secondaryBtn:hover {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  color: #fff;
+}
+
+.trustBadges {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+.badgeIcon {
+  color: #34d399;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+  
+  .mainCard {
+    padding: 40px 30px;
+  }
+  
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .trustBadges {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .offer {
+    font-size: 14px;
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainCard {
+    padding: 35px 25px;
+    border-radius: 24px;
+  }
+  
+  .heading {
+    font-size: 2.2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .characterCard {
+    padding: 20px;
+  }
+  
+  .characterIcon {
+    font-size: 48px;
+  }
+}

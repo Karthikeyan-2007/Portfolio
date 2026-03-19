@@ -1,0 +1,130 @@
+.lastfooter {
+    width: 100%;
+    padding: 60px 40px;
+    min-height: 50vh;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.contentWrapper {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.nameContainer {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    line-height: 1;
+}
+
+.mainName {
+    font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(80px, 15vw, 300px); 
+    color: #000;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.innername {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 10px; /* Slight adjustment to align visually */
+}
+
+.innername .icon {
+    font-size: clamp(20px, 4vw, 40px);
+    line-height: 1;
+}
+
+.innername .subText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 2vw, 40px);
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.innername .subText:hover {
+    opacity: 0.6;
+}
+
+/* --- Right Side: Description --- */
+.des {
+    font-size: clamp(24px, 3vw, 50px);
+    font-weight: 800;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    text-align: right;
+    line-height: 1.2;
+    color: #000;
+    max-width: 500px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 700px) {
+    .lastfooter {
+        padding: 40px 20px;
+    }
+
+    .contentWrapper {
+        flex-direction: column;
+        align-items: flex-start; /* Left align everything on mobile */
+        gap: 40px;
+    }
+
+    .nameContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .mainName {
+        /* Prevent text from overflowing screen width */
+        font-size: 18vw; 
+        line-height: 0.9;
+    }
+
+    .innername {
+        flex-direction: row; /* Icon and Text side-by-side on mobile */
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 0;
+    }
+
+    .innername .icon {
+        font-size: 24px;
+    }
+
+    .innername .subText {
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+
+    .des {
+        text-align: left; /* Easier to read on mobile */
+        width: 100%;
+        font-size: 32px;
+        padding-right: 0;
+    }
+}
+
+/* --- Small Mobile (iPhone SE etc) --- */
+@media (max-width: 400px) {
+    .mainName {
+        font-size: 22vw;
+    }
+    
+    .des {
+        font-size: 24px;
+    }
+}

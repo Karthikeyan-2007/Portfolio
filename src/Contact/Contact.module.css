@@ -1,0 +1,254 @@
+.contact_page {
+  min-height: 100vh;
+  padding: 20px;
+  background: black;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact_container {
+  width: 100%;
+  margin: 0 auto;  
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.contact_container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact_header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact_header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact_content {
+  width: 50%;
+}
+
+.contact_info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info_card {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 15px 25px ;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.info_card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.info_card p {
+  color: #bbb;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.contact_form {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.form_group {
+  margin-bottom: 22px;
+  max-width: 93%;
+}
+
+.form_group input,
+.form_group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+  outline: none;
+  border-color: #da1b60;
+  box-shadow: 0 0 0 3px rgba(218, 27, 96, 0.2);
+}
+
+.form_group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit_btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #ff8a00, #da1b60);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.submit_btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(218, 27, 96, 0.4);
+}
+
+.submit_btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success_message {
+  margin-top: 20px;
+  padding: 12px;
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  border-radius: 8px;
+  color: #2ecc71;
+  text-align: center;
+  font-weight: 500;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.side_text{
+  width: 40%;
+  padding-left: 2%;
+}
+
+.side_text p{
+  color: rgb(207,207,207);
+  font-size: 20px;
+}
+
+.head{
+  font-size: 160px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  line-height: 1em;
+  color: rgb(207,207,207);
+}
+
+.des{
+  color: grey;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-indent: 50px;
+}
+
+.subscribe_btn {
+  padding: 0px 40px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #ff8a00;
+  background: transparent;
+  border: 2px solid #ff8a00;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(218, 27, 96, 0.4);
+}
+
+.subscribe_btn:hover {
+  color: white;
+  border-color: white;
+  background: linear-gradient(135deg, #ff8a00, #da1b60);
+  box-shadow: 0 0 30px rgba(255, 138, 0, 0.8);
+}
+
+
+@media (max-width: 1300px){
+  .section{
+    display: block;
+  }
+
+  .side_text{
+    width: 100%;
+  }
+
+  .contact_content{
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact_header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact_content {
+    flex-direction: column;
+  }
+  
+  .contact_form {
+    padding: 25px;
+  }
+
+  .section{
+    display: block;
+  }
+
+  .side_text{
+    width: 100%;
+  }
+
+  .head{
+    font-size: 100px;
+  }
+
+  .contact_content{
+    width: 100%;
+  }
+
+  .des{
+    font-size: 25px;
+  }
+}

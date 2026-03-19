@@ -1,0 +1,76 @@
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+        to bottom,
+        black 50%,              
+        rgba(0, 0, 0, 0.8) 70%,
+        rgba(0, 0, 0, 0.4) 85%, 
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 100;
+    height: 150px;
+}
+
+.Name{
+    font-size: clamp(10px, 20vw, 280px);
+    position: fixed;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(207, 207, 207);
+    line-height: 0.9;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: flex-start;
+    transform-origin: top left;
+}
+
+.header button{ 
+    position: fixed;
+    right: 40px;
+    top: 20px;
+    background: transparent;
+    color: rgb(220, 220, 220);
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+
+    transition: 
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border 0.3s ease;
+}
+
+.header button:hover{
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.header button:active{
+    transform: scale(0.95);
+}
+
+@media(max-width:700px){
+    .header{
+        height: 100px;
+    }
+    .Name{
+        font-size: 45px;
+    }
+    .header button{
+        right: 2%;
+        top: 1%;
+    }
+}
