@@ -80,12 +80,12 @@
 }
 
 .head {
-  font-size: clamp(40px, 10vw, 140px);
+  font-size: clamp(32px, 12vw, 140px);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 900;
   line-height: 1em;
   color: rgb(207,207,207);
-  word-break: break-word;
+  word-break: nowrap;
 }
 
 .des{

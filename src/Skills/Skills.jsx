@@ -206,7 +206,7 @@ export default function Skills() {
                 
                 {/* Card Footer with CTA */}
                 <div className={styles.card_footer}>
-                  <button className={styles.card_read_btn}>
+                  <button className={styles.card_read_btn} onClick={() => window.open(skill.link, "_blank")}>
                     Learn More
                     <span className={styles.arrow}>→</span>
                   </button>
