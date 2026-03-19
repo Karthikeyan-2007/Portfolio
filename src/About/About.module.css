@@ -10,6 +10,7 @@
 .about {
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .context {
@@ -174,14 +175,25 @@
     .head{
         font-size: 100px;
     }
-    .about{
-        display: block;
-    }
     .side_text{
         width: 100%;
     }
     .context{
         width: 80%;
+    }
+}
+
+@media(max-width:900px){
+    .about{
+        flex-direction: column;
+    }
+
+    .context{
+        width: 100%;
+    }
+
+    .side_text{
+        width: 100%;
     }
 }
 
