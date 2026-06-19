@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import Style from "./Contact.module.css";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../Client";
 
 const ContactPage = () => {
+  const navigate = useNavigate();
   const [animate, setAnimate] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -102,9 +104,11 @@ const ContactPage = () => {
             }}
           >
             <p style={{ width: "60%", fontSize: "20px", fontWeight: "bold" }}>
-              By submitting you agree to our Terms of Service and Privacy Policy
+              Thank you for connecting with us! And we always hear to help you.
             </p>
-            <button className={Style.subscribe_btn}>SUBSCRIBE</button>
+            <button className={Style.subscribe_btn} onClick={() => navigate("/")}>
+              Back Home
+            </button>
           </div>
         </div>
 
@@ -184,15 +188,12 @@ const ContactPage = () => {
           {/* CONTACT INFO */}
           <div className={Style.contact_info}>
             <div className={Style.info_card}>
-              <h3>Location</h3>
+              <h3>Contact us</h3>
               <p>
-                123 Premium Avenue
+                Connect with us virtually through email or social media platforms.
                 <br />
-                Luxury District, LD 10001
+                We will reach you as soon as possible.
               </p>
-
-              <h3>Phone</h3>
-              <p>+91 9677510704</p>
 
               <h3>Email</h3>
               <p>Karthikeyan20070422@gmail.com</p>

@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { useNavigate } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaInstagram, FaArrowUp } from "react-icons/fa";
 
 export default function Footer() {
+  const navigate = useNavigate();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -37,11 +39,10 @@ export default function Footer() {
         {/* CONTACT */}
         <div className={styles.contact}>
           <h4>Contact</h4>
-          <p>Email: karthikeyan20070422@email.com</p>
 
           <div className={styles.newsletter}>
             <input type="email" placeholder="Enter your email" />
-            <button>Join</button>
+            <button onClick={() => navigate("/contact")}>Join</button>
           </div>
         </div>
 
